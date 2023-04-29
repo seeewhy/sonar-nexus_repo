@@ -17,7 +17,7 @@ pipeline {
         stage('Code Qualty Scan') {
            steps {
                   withSonarQubeEnv('sonar_sever') {
-             "sh 'mvn clean sonar:sonar"      
+             sh "mvn clean sonar:sonar"      
                }
             }
        }
