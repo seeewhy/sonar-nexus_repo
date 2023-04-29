@@ -17,7 +17,7 @@ pipeline {
         stage('Code Qualty Scan') {
            steps {
                   withSonarQubeEnv('sonar_sever') {
-             sh "sh 'mvn clean verify sonar:sonar -DskipTests"      
+             sh "sh 'mvn clean sonar:sonar"      
                }
             }
        }
